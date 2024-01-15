@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devang's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/3699c6dfd7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img class="logo" src="logo.png" alt="logo" />
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>          
+        </nav>
+        <div class="header-text">
+          <h1>Hi, I'm <span class="name">Devang</span> Vaghasiya</h1>
+          <p>Computer Science Student at <span class="name"> UNB </span> Fredericton</p>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------about------------- -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="user.png" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p class="text">
+              I am a computer science enthusiast, and currently looking for a
+              Co-op position in an environment that offers a greater challenge
+              in the field of software or web development, and the opportunity
+              to help the company advance efficiently and productively.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+              <p class="tab-links" onclick="opentab('awards')">Awards</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Database</span><br />SQL</li>
+                <li><span>Web Development</span><br />HTML, CSS</li>
+                <li><span>Programming language</span><br />C, Java(JavaFx)</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>Apr. 2023 - Current</span><br />Technical Support
+                  Specialist at NTI Boilers
+                </li>
+                <li>
+                  <span>Aug. 2022 - Apr. 2023</span><br />Math and CS tutor at
+                  Flora Beckett Math and Science Help Center - UNB Saint John
+                </li>
+                <li>
+                  <span>Feb. 2022 - Aug. 2023</span><br />Customer Experience
+                  Sales Floor Associate at Walmart.
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>Jan. 2022 - Current</span><br />Bachelor in Computer
+                  Sciece at UNB Fredericton.
+                </li>
+                <li>
+                  <span>June 2018 - Mar.2020</span><br />High School Diploma,
+                  India.
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="awards">
+              <ul>
+                <li><span>Mar. 2023</span><br />Dean's List</li>
+                <li>
+                  <span>Aug. 2023</span><br />Alumni Undergraduate Scholarship
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ------------Projects------------ -->
+
+    <div id="projects">
+      <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="projects-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>Project 1</p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-brands fa-java"></i>
+            <h2>Java</h2>
+            <p>Project 2</p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-regular fa-keyboard"></i>
+            <h2>JavaFx</h2>
+            <p>Project 3</p>
+            <a href="#">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ------------Contact------------- -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <div class="container-design">
+            <p> <i class="fa-solid fa-envelope"></i> devang.vaghasiya@unb.ca</p>
+            <p> <i class="fa-solid fa-phone"></i>+1 (506)292-8620</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/profile.php?id=100084027131967"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href=https://www.instagram.com/vaghasiya.devang/"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/devang-vaghasiya-248916238/"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="contact-right">
+            <a href="Devang_Vaghasiya_Resume_1.pdf" download class="btn">Download Resume</a>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
